@@ -5801,6 +5801,11 @@ small {
   font-size: 1.3rem;
   line-height: inherit; }
 
+.btnimg, {
+  text-decoration: none;
+  color: #FFF;
+  cursor: pointer; }
+	
 .btn, .btn-large {
   text-decoration: none;
   color: #FFF;
@@ -6082,13 +6087,14 @@ a.waves-effect .waves-ripple {
     bottom: 0; }
 
 .modal.bottom-sheet {
-  top: auto;
-  bottom: -100%;
-  margin: 0;
-  width: 100%;
-  max-height: 45%;
-  border-radius: 0;
-  will-change: bottom, opacity; }
+	top: auto;
+	bottom: -100%;
+	margin: 0;
+	width: 100%;
+	max-height: 95%;
+	border-radius: 0;
+	will-change: bottom, opacity;
+}
 
 .collapsible {
   border-top: 1px solid #ddd;
