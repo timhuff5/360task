@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="pl-PL">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>jOrbital documentation</title>
+	
+	<link href="sh.css" rel="stylesheet" type="text/css" />
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="../jquery.jorbital.js"></script>
+	<script type="text/javascript" src="../jquery.jeffects.js"></script>
+	<script type="text/javascript" src="js/sh_main.js"></script>
+	<script type="text/javascript" src="js/sh_html.js"></script>
+	<script type="text/javascript" src="js/sh_css.js"></script>
+	<script type="text/javascript" src="js/sh_javascript.js"></script>
+
+	<script>
+		$( function() {
+			sh_highlightDocument();		
+		});
+	</script>  
+
+  	<style>
+  		body { background:#448; padding:0; margin:0; text-align:center; font-family: "trebuchet ms"; line-height:20px; font-size:12px; color:#222 }
+  		
+  		li { list-style: none; }
+  		ul, li { padding:0; }
+  		#menu li ul { padding-left:48px; }
+  		
+  		a { text-decoration:none; color: #448888; font-weight:bold; }
+  		a:hover { color:#000 }
+  		
+  		#menu { width:200px; position:fixed; color:#fff; } 
+		#menu li { width:100%; padding:6px;  }
+  		#menu li.selected { background:#fff; border-radius:12px 0 0 12px;  }
+  		#menu li.selected a { color:#000 }
+  		#menu a { color:#eee; }
+
+		#wrapper { width:940px; text-align:left; margin:auto; }
+		#content { float:left; width:680px; background:#fff; margin-left:218px; padding:12px; min-height:640px; margin-bottom:64px; 
+			border-radius: 0 0 10px 10px;
+			-moz-border-radius: 0 0 10px 10px;
+			-webkit-border-radius: 0 0 10px 10px; 
+		}
+		
+		pre { background:#eee; padding:4px; }
+		
+		.properties th { background:#eee; padding:0 8px }
+		.properties td { vertical-align:top; padding:10px; 8px; border-bottom:1px solid #eee; border-right:1px solid #eee; }
+		.properties td.type { vertical-align:middle;  }
+		
+		.example-button { font-size:32px; color:#aaa; }
+		.example-button:hover { font-size:32px; color:#000; }
+		.example { text-align:center; background:#eee; line-height:32px;} 
+  	</style>
+  
+</head>
+<body>
+
+	<div id="wrapper">
+		<ul id="menu">
+	
+			<li >basics<ul><li ><a href="index.html">getting started</a></li><li ><a href="multi.html">multi dimensional orbits</a></li><li ><a href="properties.html">properties</a></li><li class="selected"><a href="ie.html">internet explorer</a></li><li ><a href="advice.html">advice</a></li></ul></li><li >techniques<ul><li ><a href="border_radius.html">circles</a></li><li ><a href="instant.html">instant</a></li><li ><a href="jeffects.html">jeffects</a></li></ul></li><li >boring<ul><li ><a href="credits.html">KreditZ</a></li></ul></li>			
+			<li>Every page in this documentation is important. Articles are short, so please - read them before sending me a question.</li>
+
+		</ul>
+		<div id="content">
+<!-- CONTENT -->
+<h1>Internet explorer</h1>
+
+<p>jOrbital will work for IE version 8 or above.</p>
+<p>Reason I've disabled it for IE 6,7 is that planets were clipped by their orbits.</p>
+
+<h2>But even in IE8...</h2>
+<p>It will not work without a little hack. IE is ignoring transparent backgrounds for mouse-over events.
+	This behaviour causes to close orbits right after mouse pointer leaves the jOrbital object.
+</p> 
+
+<p>Solution is very simple. You have to set an transparent image ( gif or png ) for .orbit class</p>
+
+<pre class="sh_css">
+.orbit { background:url(transparent.gif) }
+</pre>
+
+<p>I've made an transparent gif and it's included somewhere in documentation. Filename is <i>ietrans.gif</i></p>
+
+<h2>Two examples</h2>
+
+<p>Without transparent image background it behaves like: 
+<div class="orbital">
+	this
+	<div class="orbit">
+		<span>1</span>
+		<span>2</span>
+		<span>3</span>
+		<span>4</span>		
+	</div>
+</div>
+</p>
+
+<p>And now with background hacking: 
+<div class="orbital">
+	hover me
+	<div style="background:url(../ietrans.gif)" class="orbit">
+		<span>1</span>
+		<span>2</span>
+		<span>3</span>
+		<span>4</span>		
+	</div>
+</div>
+</p>
+<style>
+	.orbital { display:block; outline:1px solid #000; width:48px; height:48px; text-align:center; background:#a00; color:#fff }
+	.orbit span { background:#00a; color:#fff; width:32px; height:32px; } 
+</style>
+
+<script type="text/javascript">
+$( function() {
+	$('.orbital').jOrbital({ radius:4.0 });
+});
+</script>
+
+<h1>Span vs DIV</h1>
+<p>Sometimes jOrbital will not work with inline elements like span on IE. Even if you specify display:block, so it's recommended to use elements that are blocks by default.</p><!-- /CONTENT -->
+		</div>
+	</div>
+
+
+</body>
+
+</html>

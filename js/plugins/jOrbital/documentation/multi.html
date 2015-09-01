@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="pl-PL">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>jOrbital documentation</title>
+	
+	<link href="sh.css" rel="stylesheet" type="text/css" />
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="../jquery.jorbital.js"></script>
+	<script type="text/javascript" src="../jquery.jeffects.js"></script>
+	<script type="text/javascript" src="js/sh_main.js"></script>
+	<script type="text/javascript" src="js/sh_html.js"></script>
+	<script type="text/javascript" src="js/sh_css.js"></script>
+	<script type="text/javascript" src="js/sh_javascript.js"></script>
+
+	<script>
+		$( function() {
+			sh_highlightDocument();		
+		});
+	</script>  
+
+  	<style>
+  		body { background:#448; padding:0; margin:0; text-align:center; font-family: "trebuchet ms"; line-height:20px; font-size:12px; color:#222 }
+  		
+  		li { list-style: none; }
+  		ul, li { padding:0; }
+  		#menu li ul { padding-left:48px; }
+  		
+  		a { text-decoration:none; color: #448888; font-weight:bold; }
+  		a:hover { color:#000 }
+  		
+  		#menu { width:200px; position:fixed; color:#fff; } 
+		#menu li { width:100%; padding:6px;  }
+  		#menu li.selected { background:#fff; border-radius:12px 0 0 12px;  }
+  		#menu li.selected a { color:#000 }
+  		#menu a { color:#eee; }
+
+		#wrapper { width:940px; text-align:left; margin:auto; }
+		#content { float:left; width:680px; background:#fff; margin-left:218px; padding:12px; min-height:640px; margin-bottom:64px; 
+			border-radius: 0 0 10px 10px;
+			-moz-border-radius: 0 0 10px 10px;
+			-webkit-border-radius: 0 0 10px 10px; 
+		}
+		
+		pre { background:#eee; padding:4px; }
+		
+		.properties th { background:#eee; padding:0 8px }
+		.properties td { vertical-align:top; padding:10px; 8px; border-bottom:1px solid #eee; border-right:1px solid #eee; }
+		.properties td.type { vertical-align:middle;  }
+		
+		.example-button { font-size:32px; color:#aaa; }
+		.example-button:hover { font-size:32px; color:#000; }
+		.example { text-align:center; background:#eee; line-height:32px;} 
+  	</style>
+  
+</head>
+<body>
+
+	<div id="wrapper">
+		<ul id="menu">
+	
+			<li >basics<ul><li ><a href="index.html">getting started</a></li><li class="selected"><a href="multi.html">multi dimensional orbits</a></li><li ><a href="properties.html">properties</a></li><li ><a href="ie.html">internet explorer</a></li><li ><a href="advice.html">advice</a></li></ul></li><li >techniques<ul><li ><a href="border_radius.html">circles</a></li><li ><a href="instant.html">instant</a></li><li ><a href="jeffects.html">jeffects</a></li></ul></li><li >boring<ul><li ><a href="credits.html">KreditZ</a></li></ul></li>			
+			<li>Every page in this documentation is important. Articles are short, so please - read them before sending me a question.</li>
+
+		</ul>
+		<div id="content">
+<!-- CONTENT -->
+<h1>Multi dimensional orbits</h1>
+
+<p><i>Note that this funcionality is quite unstable and can provide you some unwanted results</i></p>
+
+<p>Once again we include jQuery and jOrbital scripts.</p>
+
+<pre class="sh_html">
+/* jquery */
+&lt;script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js">&lt;/script>
+/* jquery.jOrbital plugin */
+&lt;script type="text/javascript" src="jquery.jorbital.js">&lt;/script>
+</pre>
+
+<pre class="sh_html">
+&lt;!-- let's have some basic CSS --> 
+&lt;style>
+	.orbital { display:inline-block; width:32px; height:24px; margin:10px; 
+		background:#a00; color:#fff; padding:4px; }
+	.orbit > div { width:32px; height:32px; background:#4ac; color:#fff; 
+		text-align:center; display: block; }
+	.orbit .orbit > div { background:#8c4 }
+&lt;/style>
+
+&lt;div class="orbital">
+	Hover
+	&lt;div class="orbit">
+		&lt;div>1&lt;/div>
+		&lt;div class="orbital-2">2
+			&lt;div class="orbit">
+				&lt;div>1&lt;/div>
+				&lt;div>2&lt;/div>
+				&lt;div>3&lt;/div>
+				&lt;div>4&lt;/div>
+				&lt;div>5&lt;/div>
+			&lt;/div>
+		&lt;/div>
+		&lt;div>4&lt;/div>
+		&lt;div>5&lt;/div>
+		&lt;div>6&lt;/div>
+	&lt;/div>
+&lt;/div>
+
+</pre>
+
+<p>Of course you don't have to use DIVs. In fact you can use any TAG that suits you. Only thing to rememeber is structure and .orbit class</p>
+
+<p>Now, lets make the orbits:</p>
+
+<pre class="sh_javascript">
+$(".orbital-2").jOrbital();
+$(".orbital").jOrbital();
+</pre>
+
+<p><b>It's important</b> to keep the right order of making orbitals. The deepest orbits should be created first. That's why we used two separated classes .orbital and .orbital-2</p>
+
+<b>If everything is okay you should end-up with something like:</b>
+
+<style>
+
+	.orbital { display:inline-block; width:32px; height:24px; margin:10px; background:#a00; color:#fff; padding:4px; }
+
+	.orbit > div { width:32px; height:32px; background:#4ac; color:#fff; text-align:center; display: block; }
+	.orbit .orbit > div { background:#8c4 }
+
+</style>
+
+<div class="orbital">
+	Hover
+	<div class="orbit">
+		<div>1</div>
+		<div class="orbital-2">2
+			<div class="orbit">
+				<div>1</div>
+				<div>2</div>
+				<div>3</div>
+				<div>4</div>
+				<div>5</div>
+			</div>
+		</div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+	</div>
+</div>
+
+<script>
+	$(".orbital-2").jOrbital();
+	$(".orbital").jOrbital();
+</script>
+<!-- /CONTENT -->
+		</div>
+	</div>
+
+
+</body>
+
+</html>
