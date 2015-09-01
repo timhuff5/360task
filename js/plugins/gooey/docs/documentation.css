@@ -1,0 +1,48 @@
+html {
+    width:100%;
+}
+body {
+    width:90%;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    font-size:62.5%;
+    margin:0 auto;
+}
+h1,h2,h3,h4,h5 {
+    border-bottom:1px dotted #7da7ca;
+    padding:.8em;
+}
+h1 {
+    color:steelblue;
+    font-size: 3em;
+    font-weight:900;
+}
+h2 {
+    color:bisque;
+    font-size:2.3em;
+}
+p {
+    color:#768799;
+    font-weight:600;
+    font-size:1.9em;
+}
+.bold {
+    font-weight:900;
+    color:steelblue;
+}
+.container {
+    margin:0 auto;
+    padding:1.5em;
+}
+code.codeblock {
+    display:block;
+}
+.prettyprint {
+    font-size:1.5em;
+}
+pre.prettyprint {
+    overflow:scroll;
+}
+ol.plugins-used li {
+    font-size:1.6em;
+}

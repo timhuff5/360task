@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Gooey Menu Docs</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="documentation.css">
+    <style>
+        .prettyprint ol.linenums > li {
+            list-style-type: decimal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="color:steelblue; border-radius:50%; text-shadow: white 0 3px; font-weight: 900; text-align:center; font-size:3.5em;"> <span style="color:violet;font-size:1.2em;">Gooey</span>: jQuery Menu Plugin With Cool Gooey Effects </h1>
+        <h1>Plugin details</h1>
+        <p style="color:slategrey;"> <span class="bold">Version:</span> 1.0
+            <br> <span class="bold">Created by:</span> Kirill Goltsman
+            <br> <span class="bold">Email:</span> goltsmank@gmail.com
+        </p>
+        <h1>1. Getting started</h1>
+        <p>Put "gooey" plugin folder into your project. Include below code snippets into <code>head</code> section of your html file. You may include Font Awesome plugin if you want ready-made icons in your menu.
+        </p>
+        <pre class="prettyprint linenums lang-html">
+    &lt;script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">&lt;/script>
+    &lt;script src="gooey/src/gooey.min.js">&lt;/script>
+    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    &lt;link rel="stylesheet" href="gooey/src/gooey.min.css"&gt;
+</pre>
+        <h1>2. Add Markup</h1>
+        <p>Add markup to your html file. You can use any number of menu links and any labels or text for your menu links. The markup structure proposed below is desirable to avoid any bugs. You can use any valid class or id name for your <code>nav</code> element. This will be automatically handled by the plugin.
+            <br><span style="color:red;">Note:</span> If you use several menus on one page, don't forget to create unique ids and names for your hidden checkbox element that has class ".menu-open".
+        </p>
+        <pre class="prettyprint linenums html-lang">
+   &lt;nav id="gooey">
+   &lt;input type="checkbox" class="menu-open" name="menu-open" id="menu-open"/>
+   &lt;label class="open-button" for="menu-open">
+     &lt;span class="burger burger-1"> &lt;/span>
+     &lt;span class="burger burger-2"> &lt;/span>
+     &lt;span class="burger burger-3"> &lt;/span>
+   &lt;/label>
+  
+   &lt;a href="#" class="gooey-menu-item">  &lt;i class="fa fa-cab"> &lt;/i>  &lt;/a>
+   &lt;a href="#" class="gooey-menu-item">  &lt;i class="fa fa-automobile"> &lt;/i>  &lt;/a>
+   &lt;a href="#" class="gooey-menu-item">  &lt;i class="fa fa-truck"> &lt;/i>  &lt;/a>
+   &lt;a href="#" class="gooey-menu-item">  &lt;i class="fa fa-rocket"> &lt;/i>  &lt;/a>
+ &lt;/nav>
+    </pre>
+        <h1> 3. Hook up your menu</h1>
+        <p>To indicate your settings, put the following code within a <code>script</code> tag in your <code>head</code> section, html <code>body</code> element or in a separate Javascript file. Here is an example of how to set a horizontal Gooey Menu with pink menu items. Please, remember that a selector's id or class on which <code>gooeyMenu</code> function is called should be identical to <code>nav</code> element id or class in your html markup (in this example, <code>nav</code> id is <code>gooey</code>)
+        </p>
+        <pre class="prettyprint linenums">
+        $(function($) {
+         $("#gooey").gooeymenu({
+          style: "horizontal",
+          bgColor: "pink"
+         });
+         });
+    </pre>
+        <h1>4. Specify your settings</h1>
+        <p>You have a list of options to tailor a gooey menu to your needs </p>
+        <pre class=" prettyprint linenums">
+
+         style: "horizontal",    // {String} Sets gooey menu style. Accepted values: "horizontal","vertical","circle"
+         size:70,                // {Integer} Sets a menu item's size in pixels
+         margin:"medium",        //  {String} Sets the margin between menu items. Acts only if "spaced" option of "horizontal" or "vertical" style is selected. Accepted values: "small","medium" and "large"
+         bgColor: "steelblue", // {String} Sets background-color of a menu-item element
+         contentColor:"white",    // {String} Sets font color of a menu item's content;
+         transitionStep:100,     // {Integer}  Sets a speed rate at which each menu item unfolds in milliseconds
+         bounce:false,           // {Boolean}  Turns "bounce" effect off if {false} and on if {true}
+         bounceLength:"medium",  // {String}   Sets the bounce length, if bounce effect is enabled. Accepted values: "small", "medium" and "large"
+         hover:"white",    // {String} Sets menu items' color on hover
+         
+         // Style-specific settings
+         
+         circle: {
+             radius:80            // {Integer} Sets a radius of menu circle when a menu is opened (in pixels)
+         },
+         horizontal: {
+             menuItemPosition:"glue" // {String} "Spaced" option sets the spacing of menu items by a specified margin. "Glue" option makes items stacked.
+         },
+         vertical:  {
+             menuItemPosition:"spaced" // {String} "Spaced" option sets the spacing of menu items by a specified margin. "Glue" option makes items stacked.
+             direction:"up"            // {String} Values: "up" or "down". A direction in which vertical menu unfolds
+        },
+
+         //Callback API
+         open:function(){},    // {function} Fires when a gooey menu is opened. <code>$(this)</code> context for the function is the element on which <code>gooeymenu</code> was called
+         close:function() {}   // {function} Fires when a gooey menu is closed. <code>$(this)</code> context for the function is the element on which <code>gooeymenu</code> was called
+     };
+     };
+    </pre>
+        <h1>Styling your menu</h1>
+        <p> Style menu's margins and indentation. You may set menu items indentation by changing left/top/right/bottom or margin properties of menu items and menu open button.
+            Since menu's size will depend on a number of items and menu style, you have a full freedom to set position of your menu according to your needs.
+            Note, that .navimenu container is relatively positioned by default and menu items are absolutely positioned. 
+        </p>
+        <pre class="prettyprint linenums">
+            .navimenu .gooey-menu-item, .navimenu .open-button {
+                     border-radius: 100%;
+                     left: 50px; /* Style left indent */
+                     top:100px;  /*  Style top indent */
+                     position: absolute;
+               }
+        </pre>
+        <p>Change a burger icon's background</p>
+        <pre class='prettyprint linenums'>
+         .navimenu .burger {
+             background: white;
+         }
+    </pre>
+        <h1>Credits</h1>
+        <p>Scripts and plugins used in the demo and this docs</p>
+        <ol class='plugins-used bold'>
+            <li> jQuery</li>
+            <li> FontAwesome </li>
+            <li> Google Code Prettify </li>
+
+        </ol>
+    </div>
+    <script type="text/javascript" src="../libs/google-code-prettify/run_prettify.js"></script>
+</body>
+</html>
