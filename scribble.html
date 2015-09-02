@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="taskData">
+<head>
+<!-- Favicons-->
+  <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
+  <!-- Favicons-->
+  <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
+  <!-- For iPhone -->
+  <meta name="msapplication-TileColor" content="#00bcd4">
+  <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+  <!-- For Windows Phone -->
+
+
+  <!-- CORE CSS-->
+  
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen">
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen">
+    <!-- Custome CSS-->    
+    <link href="css/custom-style.css" type="text/css" rel="stylesheet" media="screen">
+  <!-- CSS for full screen (Layout-2)-->    
+  <link href="css/style-fullscreen.css" type="text/css" rel="stylesheet" media="screen">
+
+
+  <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
+  <link href="css/prism.css" type="text/css" rel="stylesheet" media="screen">
+  <link href="js/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen">
+  <link href="js/plugins/chartist-js/chartist.min.css" type="text/css" rel="stylesheet" media="screen">
+	<script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+</head>
+<body>
+<div ng-controller="GuidelinesController"><div ng-include="'tempGuide'"></div></div>
+<div ng-controller="ToolsController"><div ng-include="'tempTool'"></div></div>
+<div ng-controller="SMEController"><div ng-include="'tempSME'" onload="callSkype()"></div></div>
+
+<script type="text/ng-template" id="tempGuide">
+	<ul id="profile-page-about-feed" class="collection z-depth-1" ng-repeat="guide in guidelines">
+      <li class="collection-item avatar">
+        <span class="title">{{guide.section}}</span>
+        <p>{{guide.linetext}} 
+          <br> <span class="ultra-small">{{guide.listtext}}</span>
+        </p>
+      </li>
+    </ul>
+</script>
+
+<script type="text/ng-template" id="tempTool">
+	<ul id="profile-page-about-feed" class="collection z-depth-1" ng-repeat="tool in tools">
+		<span>{{tool.toolbox}}</span>
+		<li class="collection-item avatar" ng-repeat="toolitem in tool.tools">
+		<img ng-src="{{toolitem.toolimage}}" alt="" class="circle">
+			<span class="title">{{toolitem.toolname}}</span>
+			<p>{{toolitem.tooldescription}} 
+			</p>
+			<a ng-href="{toolitem.toolurl}" class="secondary-content">{{toolitem.toolname}}</a>
+		</li>
+	</ul>
+</script>
+
+<script type="text/ng-template" id="tempSME">
+<ul id="profile-page-about-feed" class="collection z-depth-1" ng-repeat="sme in smes">
+  <li class="collection-item avatar">
+    <img ng-src="{{sme.image}}" alt="" class="circle">
+    <span class="title">{{sme.name}}</span>
+    <p><a ng-href="{{'mailto:'+sme.email+'?Subject=User Story assistance'}}">Email</p>
+    <a href="#!" class="secondary-content"><div id="{{'SkypeButton_Call_timhuff5_'+$index}}"></div></a>
+  </li>
+</ul>
+</script>
+<!-- jQuery Library -->
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>    
+    <!--materialize js-->
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <!--prism-->
+    <script type="text/javascript" src="js/prism.js"></script>
+    <!--scrollbar-->
+    <script type="text/javascript" src="js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <!-- chartist -->
+    <script type="text/javascript" src="js/plugins/chartist-js/chartist.min.js"></script>   
+    <script src="js/plugins/jOrbital/jquery.jorbital.js"></script>
+    <!--plugins.js - Some Specific JS codes for Plugin Settings-->
+    <script type="text/javascript" src="js/plugins.js"></script>
+
+    <!-- skype plugin -->
+    <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
+</body>
+</html>

@@ -1,22 +1,22 @@
 [
     {
         "name": "Tim Huff",
-        "image": "images\tim.png",
+        "image": "images\\tim.png",
         "email": "tim.huff@hp.com"
     },
     {
         "name": "Joe Dude",
-        "image": "images\joe.png",
+        "image": "images\\joe.png",
         "email": "joe.dude@hp.com"
     },
     {
         "name": "Jim Bob",
-        "image": "images\jim.png",
+        "image": "images\\jim.png",
         "email": "jim.bob@hp.com"
     },
     {
         "name": "Debbie Jo",
-        "image": "images\deb.png",
+        "image": "images\\deb.png",
         "email": "deb.jo@hp.com"
     }
 ]
