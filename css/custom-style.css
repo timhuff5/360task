@@ -6,7 +6,6 @@ WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BET
 
 	/* this line is necessary in every project using jEffects */
 
-	body { height:1024px; text-align:center; background:#000 center center no-repeat; overflow:hidden; color:#f0f; font-family:"trebuchet ms"; padding:0; margin:0 }
 
 	h1:hover {color:#006699 }
 	span { border:2px solid #006699}
