@@ -1,17 +1,24 @@
 [
-{"section": "Guidelines",
-"linetext":"The primary Agile artifact used to describe system behavior and user value is the “User Story.” User stories are user and value centric, as they put the user, not the system, as the subject of interest. In support of this, the recommended form of expression is the “user voice form,” and it appears as follows: As a 〈user role〉 I can 〈activity〉 so that 〈business value〉By using this form, the teams are constantly guided to understand who is using the system, what they are specifically doing with it, and why they are doing it. Applying it routinely continuously increases the team’s domain competence as they come to better understand the real business needs of their user. Here is an example:" ,
-"listtext": "User stories also follow the XP alliteration of the “3Cs”: Card (short statement of intent), Conversation (discussion with the user/product owner and team), and Confirmation (acceptance criteria which define the conditions of satisfaction for the completed story).  Card represents the physical capture of the statement of intent of the user story. The card metaphor provides a tangible and kinesthetic relationship between the team and “this thing a user wants to do”. By its nature, the card physically limits the length of the story, and thereby, too-early specificity of system behavior. It also helps keep keeps the story lightweight and malleable. Cards also help the team “feel” upcoming scope, as there is something materially different about holding 10 cards in ones hand from looking at 10 lines on a spreadsheet. Conversation represents a “promise for a conversation” between the team, customer/user, the product owner, and other stakeholders. This is the discussion necessary to determine the more detailed behavior required to implement the intent. The conversation may spawn additional specificity in the form of attachments to the user story (mockup, spreadsheet, algorithm, timing diagram, etc). Confirmation. While user stories are intentionally written as short and coarse statements, the stories acceptance criteria provides the precision necessary to assure that the story is implemented " },
-{"section": "Investing in Good User Stories",
-"linetext":"Teams often use Bill Wake’s “INVEST” acronym (Independent, Negotiable, Valuable, Estimable, Small, Testable; see References [1] and [2]) to reason about stories." ,
- },
-{"section": "Device or a System User Story",
-"linetext":"While the user story is the primary, and most desirable form of story, not every system under development interacts with an end user. Sometimes, the “user” is a device (example: printer) or other." ,
- },
-{"section": "Technical Stories",
-"linetext":"Sometimes, the development teams must develop component functionality that is needed to implement a number of different user stories, or support other components of the system. In this case, the story may not directly touch any end user at all, and we can express these stories in technical, rather than user-centric language, as Figure 4 illustrates. Even then, however, we recommended keeping the “… so that …” portion of the form so that the motivation for the story is understood. And of course, technical stories are demonstrated just like user stories, typically via UI, stub or mock." ,
- },
-{"section": "Splitting Stories",
-"linetext":"Smaller stories allow for faster, more reliable implementation (small things go through a system faster, reduce complexity and manage risk). Splitting bigger stories into smaller ones is thus a mandatory " ,
-"listtext": "Workflow steps.  Business rule variations. Major effort. Simple/complex. Variations in data." }
+  {
+    "section": "Guidelines",
+    "linetext": "The primary Agile artifact used to describe system behavior and user value is the “User Story.” User stories are user and value centric, as they put the user, not the system, as the subject of interest. In support of this, the recommended form of expression is the “user voice form,” and it appears as follows: As a 〈user role〉 I can 〈activity〉 so that 〈business value〉By using this form, the teams are constantly guided to understand who is using the system, what they are specifically doing with it, and why they are doing it. Applying it routinely continuously increases the team’s domain competence as they come to better understand the real business needs of their user. Here is an example:",
+    "listtext": "User stories also follow the XP alliteration of the “3Cs”: Card (short statement of intent), Conversation (discussion with the user/product owner and team), and Confirmation (acceptance criteria which define the conditions of satisfaction for the completed story).  Card represents the physical capture of the statement of intent of the user story. The card metaphor provides a tangible and kinesthetic relationship between the team and “this thing a user wants to do”. By its nature, the card physically limits the length of the story, and thereby, too-early specificity of system behavior. It also helps keep keeps the story lightweight and malleable. Cards also help the team “feel” upcoming scope, as there is something materially different about holding 10 cards in ones hand from looking at 10 lines on a spreadsheet. Conversation represents a “promise for a conversation” between the team, customer/user, the product owner, and other stakeholders. This is the discussion necessary to determine the more detailed behavior required to implement the intent. The conversation may spawn additional specificity in the form of attachments to the user story (mockup, spreadsheet, algorithm, timing diagram, etc). Confirmation. While user stories are intentionally written as short and coarse statements, the stories acceptance criteria provides the precision necessary to assure that the story is implemented "
+  },
+  {
+    "section": "Investing in Good User Stories",
+    "linetext": "Teams often use Bill Wake’s “INVEST” acronym (Independent, Negotiable, Valuable, Estimable, Small, Testable; see References [1] and [2]) to reason about stories."
+  },
+  {
+    "section": "Device or a System User Story",
+    "linetext": "While the user story is the primary, and most desirable form of story, not every system under development interacts with an end user. Sometimes, the “user” is a device (example: printer) or other."
+  },
+  {
+    "section": "Technical Stories",
+    "linetext": "Sometimes, the development teams must develop component functionality that is needed to implement a number of different user stories, or support other components of the system. In this case, the story may not directly touch any end user at all, and we can express these stories in technical, rather than user-centric language, as Figure 4 illustrates. Even then, however, we recommended keeping the “… so that …” portion of the form so that the motivation for the story is understood. And of course, technical stories are demonstrated just like user stories, typically via UI, stub or mock."
+  },
+  {
+    "section": "Splitting Stories",
+    "linetext": "Smaller stories allow for faster, more reliable implementation (small things go through a system faster, reduce complexity and manage risk). Splitting bigger stories into smaller ones is thus a mandatory ",
+    "listtext": "Workflow steps.  Business rule variations. Major effort. Simple/complex. Variations in data."
+  }
 ]
