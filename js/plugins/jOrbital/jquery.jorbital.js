@@ -121,7 +121,7 @@
 		else var zIndex = 0;
 		  zIndex = 0;
 
-		if( !$.browser.msie ) {
+		if( true ) {
 		
 		$o.children( data.selector ).hide().css({
 			"z-index": 5,
@@ -296,13 +296,13 @@
 		
 		
 		
-		if( config.disableIE6 && $.browser.msie && parseInt($.browser.version) <= 6 ) {
-			return this;
-		}
+		// if( config.disableIE6 && $.browser.msie && parseInt($.browser.version) <= 6 ) {
+		// 	return this;
+		// }
 
-		if( config.disableIE7 && $.browser.msie && parseInt($.browser.version) <= 7 ) {
-			return this;
-		}
+		// if( config.disableIE7 && $.browser.msie && parseInt($.browser.version) <= 7 ) {
+		// 	return this;
+		// }
 	
 		if( command == undefined ) var command = {}
 
