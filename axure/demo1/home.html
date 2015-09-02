@@ -189,7 +189,7 @@
 
             <!-- tooltextpanel (Dynamic Panel) -->
             <div id="u27" class="ax_default" data-label="tooltextpanel">
-              <div id="u27_state0" class="panel_state" data-label="State1">
+              <div id="u27_state0" class="panel_state" data-label="State1" ng-controller="ToolsController">
                 <div id="u27_state0_content" class="panel_state_content">
 
                   <!-- Unnamed (Rectangle) -->
@@ -206,7 +206,7 @@
                     <div id="u30_div" class=""></div>
                     <!-- Unnamed () -->
                     <div id="u31" class="text" style="visibility: visible;">
-                      <p><span>Adobe Illustrator</span></p>
+                      <p><span>{{tools[0].tools[0].toolname}}</span></p>
                     </div>
                   </div>
 
@@ -215,7 +215,7 @@
                     <div id="u32_div" class=""></div>
                     <!-- Unnamed () -->
                     <div id="u33" class="text" style="visibility: visible;">
-                      <p><span>Vector editing tool</span></p>
+                      <p><span>{{tools[0].tools[0].tooldescription}}</span></p>
                     </div>
                   </div>
 
@@ -233,7 +233,7 @@
                     <div id="u36_div" class=""></div>
                     <!-- Unnamed () -->
                     <div id="u37" class="text" style="visibility: visible;">
-                      <p><span>Axure </span></p>
+                      <p><span>{{tools[0].tools[2].toolname}} </span></p>
                     </div>
                   </div>
 
@@ -242,7 +242,7 @@
                     <div id="u38_div" class=""></div>
                     <!-- Unnamed () -->
                     <div id="u39" class="text" style="visibility: visible;">
-                      <p><span>Ralid Prototypng tool</span></p>
+                      <p><span>{{tools[0].tools[2].tooldescription}}</span></p>
                     </div>
                   </div>
 
@@ -260,7 +260,7 @@
                     <div id="u42_div" class=""></div>
                     <!-- Unnamed () -->
                     <div id="u43" class="text" style="visibility: visible;">
-                      <p><span>Photoshop</span></p>
+                      <p><span>{{tools[0].tools[1].toolname}}</span></p>
                     </div>
                   </div>
 
@@ -269,7 +269,7 @@
                     <div id="u44_div" class=""></div>
                     <!-- Unnamed () -->
                     <div id="u45" class="text" style="visibility: visible;">
-                      <p><span>Pixed Editing tool</span></p>
+                      <p><span>{{tools[0].tools[1].tooldescription}}</span></p>
                     </div>
                   </div>
 
