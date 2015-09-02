@@ -1,8 +1,13 @@
 [
+{
+    "name": "Tim Huff",
+    "image": "images\\home\\u96.png",
+    "email": "tim.huff@hp.com"
+},
     {
-        "name": "Joe Dude",
+        "name": "Gilbert Guerrero",
         "image": "images\\joe.png",
-        "email": "joe.dude@hp.com"
+        "email": "gilbert.guerrero@hp.com"
     },
     {
         "name": "Jim Bob",
@@ -13,10 +18,5 @@
         "name": "Debbie Jo",
         "image": "images\\deb.png",
         "email": "deb.jo@hp.com"
-    },
-    {
-        "name": "Tim Huff",
-        "image": "images\\tim.png",
-        "email": "tim.huff@hp.com"
     }
 ]

@@ -386,7 +386,7 @@
             <!-- Guidelinetextpanel (Dynamic Panel) -->
             <div id="u69" class="ax_default" data-label="Guidelinetextpanel">
               <div id="u69_state0" class="panel_state" data-label="State1" ng-controller="GuidelinesController">
-                <div id="u69_state0_content" class="panel_state_content" ng-repeat="guide in guidelines">
+                <div id="u69_state0_content" class="panel_state_content">
 
                   <!-- Unnamed (Rectangle) -->
                   <div id="u70" class="ax_default box_2">
@@ -402,7 +402,7 @@
                     <div id="u72_div" class=""></div>
                     <!-- Unnamed () -->
                     <div id="u73" class="text" style="visibility: visible;">
-                      <p><span>{{guide.section}}</span></p>
+                      <p><span>{{guidelines[0].section}}</span></p>
                     </div>
                   </div>
 
@@ -411,7 +411,7 @@
                     <div id="u74_div" class=""></div>
                     <!-- Unnamed () -->
                     <div id="u75" class="text" style="visibility: visible;">
-                      <p><span>{{guide.listtext}}</span></p>
+                      <p><span>{{guidelines[0].linetext}}</span></p>
                     </div>
                   </div>
 
@@ -438,7 +438,7 @@
                     <div id="u80_div" class=""></div>
                     <!-- Unnamed () -->
                     <div id="u81" class="text" style="visibility: visible;">
-                      <p><span>Guideline 2</span></p>
+                      <p><span>{{guidelines[1].section}}</span></p>
                     </div>
                   </div>
 
@@ -447,7 +447,7 @@
                     <div id="u82_div" class=""></div>
                     <!-- Unnamed () -->
                     <div id="u83" class="text" style="visibility: visible;">
-                      <p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</span></p>
+                      <p><span>{{guidelines[1].linetext}}</span></p>
                     </div>
                   </div>
 
@@ -492,7 +492,7 @@
             <!-- smetextpanel (Dynamic Panel) -->
             <div id="u91" class="ax_default" data-label="smetextpanel">
               <div id="u91_state0" class="panel_state" data-label="State1" ng-controller="SMEController">
-                <div id="u91_state0_content" class="panel_state_content" ng-repeat="sme in smes">
+                <div id="u91_state0_content" class="panel_state_content">
 
                   <!-- Unnamed (Rectangle) -->
                   <div id="u92" class="ax_default box_2">
@@ -508,13 +508,13 @@
                     <div id="u94_div" class=""></div>
                     <!-- Unnamed () -->
                     <div id="u95" class="text" style="visibility: visible;">
-                      <p><span>{{sme.name}}</span></p>
+                      <p><span>{{smes[0].name}}</span></p>
                     </div>
                   </div>
 
                   <!-- Unnamed (Image) -->
                   <div id="u96" class="ax_default image">
-                    <img id="u96_img" class="img " src="images/home/u96.png"/>
+                    <img id="u96_img" class="img " ng-src="{{smes[0].image}}"/>
                     <!-- Unnamed () -->
                     <div id="u97" class="text" style="display: none; visibility: hidden">
                       <p><span></span></p>
@@ -535,7 +535,7 @@
                     <div id="u100_div" class=""></div>
                     <!-- Unnamed () -->
                     <div id="u101" class="text" style="visibility: visible;">
-                      <p><span><a ng-href="{{'mailto:'+sme.email+'?Subject=Assistance'}}">Email</a></span></p>
+                      <p><span><a ng-href="{{'mailto:'+smes[0].email+'?Subject=Assistance'}}">Email</a></span></p>
                     </div>
                   </div>
 
@@ -553,7 +553,7 @@
                     <div id="u104_div" class=""></div>
                     <!-- Unnamed () -->
                     <div id="u105" class="text" style="visibility: visible;">
-                      <p><span>Gilbert Guerrero</span></p>
+                      <p><span>{{smes[1].name}}</span></p>
                     </div>
                   </div>
 
@@ -571,7 +571,7 @@
                     <div id="u108_div" class=""></div>
                     <!-- Unnamed () -->
                     <div id="u109" class="text" style="visibility: visible;">
-                      <p><span>email</span></p>
+                      <p><span><a ng-href="{{'mailto:'+smes[1].email+'?Subject=Assistance'}}">Email</a></span></p>
                     </div>
                   </div>
 
@@ -589,7 +589,7 @@
                     <div id="u112_div" class=""></div>
                     <!-- Unnamed () -->
                     <div id="u113" class="text" style="visibility: visible;">
-                      <p><span>Debbie Jo Arty</span></p>
+                      <p><span>{{smes[2].name}}</span></p>
                     </div>
                   </div>
 
@@ -607,7 +607,7 @@
                     <div id="u116_div" class=""></div>
                     <!-- Unnamed () -->
                     <div id="u117" class="text" style="visibility: visible;">
-                      <p><span>email</span></p>
+                      <p><span><a ng-href="{{'mailto:'+smes[2].email+'?Subject=Assistance'}}">Email</a></span></p>
                     </div>
                   </div>
 
