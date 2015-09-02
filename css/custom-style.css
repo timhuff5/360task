@@ -3,3 +3,55 @@ NOTE:
 ------
 PLACE HERE YOUR OWN CSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
 WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+
+	/* this line is necessary in every project using jEffects */
+
+	body { height:1024px; text-align:center; background:#000 center center no-repeat; overflow:hidden; color:#f0f; font-family:"trebuchet ms"; padding:0; margin:0 }
+
+	h1:hover {color:#006699 }
+	span { border:2px solid #006699}
+	span:hover { border-color:#fff !important }
+	
+	.orbital {
+	top: 300px;
+	width: 40px;
+	height: 40px;
+	left: 400px;
+	padding: 5px;
+	border: #ffffff solid #0096d6;
+	border-radius: 300px !important;
+	-moz-border-radius: 300px !important;
+	-webkit-border-radius: 300px !important;
+	background-repeat: no-repeat;
+	color: #0096d6;
+	background-origin: content-box;
+	vertical-align: text-top;
+	text-align: center;
+	background-image: url(../images/task360logo-v01.png);
+	/* [disabled]background-position: 50% 50%; */
+	background-size: auto 100%;
+}
+
+	.orbit .orbit .orbit span { background:#0096d6; color:#ffffff; border-color:#0096d6}
+	.orbit .orbit .orbit .orbit span { background:#0096d6; color:#ffffff; border-color:#0096d6 }
+	
+	.orbit {
+	/* [disabled]border-color: #0096d6; */
+	/* [disabled]border-style: solid; */
+	/* [disabled]border-width: 1px; */
+	border-radius: 200px;
+	-moz-border-radius: 200px;
+	-webkit-border-radius: 200px;
+}
+	.orbit span { display:block; color:#ffffff; background:#0096d6; width:32px; height:32px; line-height:32px;
+	border-radius:32px; 
+	-moz-border-radius:32px; 
+	-webkit-border-radius:32px; }
+	
+	#examples { position:fixed; color:#0096d6; padding:4px;}
+	#examples a { color:inherit; text-decoration:none }
+	#examples a.example {color:#fff; font-size:12px; font-weight:bold; background:#ccc; color:#222; padding:4px; text-shadow:0 -1px 2px #fff; border-top:1px solid #eee; border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; }
+	#examples h1 { color:#f0a; display:inline }	
+	#examples a.example:hover { background:#fff }
+	
+	.orbital3, .orbital4, .orbital2 { border-style:dotted; }
