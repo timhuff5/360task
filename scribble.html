@@ -62,7 +62,7 @@
   <li class="collection-item avatar">
     <img ng-src="{{sme.image}}" alt="" class="circle">
     <span class="title">{{sme.name}}</span>
-    <p>{{sme.email}}</p>
+    <a ng-href="{{'mailto:'+sme.email+'?Subject=User Story assistance'}}">{{sme.email}}</p>
     <a href="#!" class="secondary-content"><div id="SkypeButton_Call_timhuff5_1"></div></a>
   </li>
 </ul>
