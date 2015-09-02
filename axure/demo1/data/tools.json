@@ -1,0 +1,25 @@
+[
+    {
+        "toolbox": "UX",
+        "tools": [
+            {
+                "toolname": "Adobe Illustrator",
+                "tooldescription": "Vector Editor global site license",
+                "toolimage": "images\\illustrator_logo.png",
+                "toolurl": "\\s34w0001.americas.hpqcorp.net\\Adobe$"
+            },
+            {
+                "toolname": "Adobe Photoshop",
+                "tooldescription": "Vector Editor global site license",
+                "toolimage": "images\\Photoshop_icon.png",
+                "toolurl": "\\s34w0001.americas.hpqcorp.net\\Adobe$"
+            },
+            {
+                "toolname": "Axure",
+                "tooldescription": "Rapid prototyping tool",
+                "toolimage": "images\\axure_logo.png",
+                "toolurl": "\\s34w0001.americas.hpqcorp.net\\Adobe$"
+            }
+        ]
+    }
+]
