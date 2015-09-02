@@ -26,11 +26,30 @@
 			setTimeout(function(){
 				Skype.ui({
 					"name": "chat",
+					"element": "SkypeButton_Call_timhuff5_0",
+					"participants": ["timhuff5"],
+					"imageSize": 32
+				});
+				Skype.ui({
+					"name": "chat",
 					"element": "SkypeButton_Call_timhuff5_1",
 					"participants": ["timhuff5"],
 					"imageSize": 32
 				});
-			}, 1000);
+				Skype.ui({
+					"name": "chat",
+					"element": "SkypeButton_Call_timhuff5_2",
+					"participants": ["timhuff5"],
+					"imageSize": 32
+				});
+				Skype.ui({
+					"name": "chat",
+					"element": "SkypeButton_Call_timhuff5_3",
+					"participants": ["timhuff5"],
+					"imageSize": 32
+				});
+			}, 200);
+
 		};
 		$http.get('data/sme.json')
 			.then(function(res) {
