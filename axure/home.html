@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="taskData">
   <head>
     <title>Home</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -385,8 +385,8 @@
 
             <!-- Guidelinetextpanel (Dynamic Panel) -->
             <div id="u69" class="ax_default" data-label="Guidelinetextpanel">
-              <div id="u69_state0" class="panel_state" data-label="State1">
-                <div id="u69_state0_content" class="panel_state_content">
+              <div id="u69_state0" class="panel_state" data-label="State1" ng-controller="GuidelinesController">
+                <div id="u69_state0_content" class="panel_state_content" ng-repeat="guide in guidelines">
 
                   <!-- Unnamed (Rectangle) -->
                   <div id="u70" class="ax_default box_2">
@@ -402,7 +402,7 @@
                     <div id="u72_div" class=""></div>
                     <!-- Unnamed () -->
                     <div id="u73" class="text" style="visibility: visible;">
-                      <p><span>Guideline 1</span></p>
+                      <p><span>{{guide.section}}</span></p>
                     </div>
                   </div>
 
@@ -411,7 +411,7 @@
                     <div id="u74_div" class=""></div>
                     <!-- Unnamed () -->
                     <div id="u75" class="text" style="visibility: visible;">
-                      <p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</span></p>
+                      <p><span>{{guide.listtext}}</span></p>
                     </div>
                   </div>
 
@@ -491,8 +491,8 @@
 
             <!-- smetextpanel (Dynamic Panel) -->
             <div id="u91" class="ax_default" data-label="smetextpanel">
-              <div id="u91_state0" class="panel_state" data-label="State1">
-                <div id="u91_state0_content" class="panel_state_content">
+              <div id="u91_state0" class="panel_state" data-label="State1" ng-controller="SMEController">
+                <div id="u91_state0_content" class="panel_state_content" ng-repeat="sme in smes">
 
                   <!-- Unnamed (Rectangle) -->
                   <div id="u92" class="ax_default box_2">
@@ -508,7 +508,7 @@
                     <div id="u94_div" class=""></div>
                     <!-- Unnamed () -->
                     <div id="u95" class="text" style="visibility: visible;">
-                      <p><span>Tim Huff</span></p>
+                      <p><span>{{sme.name}}</span></p>
                     </div>
                   </div>
 
@@ -535,7 +535,7 @@
                     <div id="u100_div" class=""></div>
                     <!-- Unnamed () -->
                     <div id="u101" class="text" style="visibility: visible;">
-                      <p><span>email</span></p>
+                      <p><span><a ng-href="{{'mailto:'+sme.email+'?Subject=Assistance'}}">Email</a></span></p>
                     </div>
                   </div>
 
@@ -819,5 +819,7 @@
         </div>
       </div>
     </div>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
